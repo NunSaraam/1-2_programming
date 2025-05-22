@@ -38,18 +38,21 @@ public class YDG_2025137064_0522 : MonoBehaviour
         // 4-12 º¯Çü
         string str;
         int s = 10;
-        str = "*";
-        for (int n = 0; n < s; n++)
+        for (int n = 1; n <= s; n++)
         {
+            str = "";
+
             for (int o = 0; o < s - n; o++)
             {
-                Debug.Log(" ");
+                str += "  ";
             }
+
             for (int t = 0; t < n; t++)
             {
-                Debug.Log(str);
+                str += "*";
             }
-            Debug.Log("");
+
+            Debug.Log(str);
         }
 
         // 4-14
