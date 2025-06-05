@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class YDG_2025137064_0605 : MonoBehaviour
 {
@@ -80,6 +81,24 @@ public class YDG_2025137064_0605 : MonoBehaviour
         }
     }
 
+    // 6 - 7
+    class Product2
+    {
+        public string name;
+        public int price;
+
+        public Product2(string name, int price)
+        {
+            this.name = name;
+            this.price = price;
+        }
+
+        Product2()
+        {
+            Debug.Log(this.name + "의 소멸자 호출");
+        }
+    }
+
     void Start()
     {
         // 10 - 1
@@ -111,6 +130,14 @@ public class YDG_2025137064_0605 : MonoBehaviour
 
         // 6 - 6
         Product productA = new Product("감자", 2000);
+        Product productB = new Product("고구마", 3000);
+
+        Debug.Log(productA.id + ":" + productA.name);
+        Debug.Log(productB.id + ":" + productB.name);
+        Debug.Log(Product.counter + "개 생성되었습니다.");
+
+        // 6 - 7
+        Product2 product2 = new Product2("과자", 1000);
     }
 
 }
