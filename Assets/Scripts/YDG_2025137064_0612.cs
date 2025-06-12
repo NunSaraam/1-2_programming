@@ -64,6 +64,37 @@ public class YDG_2025137064_0612 : MonoBehaviour
         public int Height { get; private set; }
     }
 
+    // 6 - 2
+    class Fibonacci
+    {
+        private static Dictionary<int, long>memo = new Dictionary<int, long>();
+        public static long Get(int i)
+        {
+            if (i < 0) { return 0; }
+            if (i == 1) { return 1; }
+
+            if (memo.ContainsKey(i))
+            {
+                return memo[i];
+            }
+            else
+            {
+                long value = Get(i - 2) + Get(i - 1);
+                memo[i] = value;
+                return value;
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Debug.Log(Fibonacci.Get(40));
+            Debug.Log(Fibonacci.Get(100));
+        }
+    }
+
     private void Start()
     {
         Box box = new Box(-10, -20);
@@ -77,5 +108,8 @@ public class YDG_2025137064_0612 : MonoBehaviour
         sq.Width = 10;
         //sq.Height = 10;
 
+
+        Debug.Log(Fibonacci.Get(40));
+        Debug.Log(Fibonacci.Get(100));
     }
 }
