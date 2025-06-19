@@ -10,12 +10,12 @@ public class YDG_2025137064_0619_Zoo : MonoBehaviour
         YDG_2025137064_0619_Animal tom = new YDG_2025137064_0619_Animal();
         tom.name = "Åè";
         tom.sound = "³Ä¿Ë";
+        tom.PlaySound();
+
 
         YDG_2025137064_0619_Animal jerry = new YDG_2025137064_0619_Animal();
         jerry.name = "Á¦¸®";
         jerry.sound = "ÂïÂï";
-
-        tom.PlaySound();
         jerry.PlaySound();
 
         jerry = tom;
@@ -23,5 +23,6 @@ public class YDG_2025137064_0619_Zoo : MonoBehaviour
 
         tom.PlaySound();
         jerry.PlaySound();
+  
     }
 }
